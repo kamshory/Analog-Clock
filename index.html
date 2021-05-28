@@ -25,7 +25,7 @@
             drawHour();
             drawMinute();
             drawSecond();
-            drawDot(5);
+            drawDot();
             requestAnimationFrame(drawClock);
         }
 
@@ -95,8 +95,9 @@
             drawLine(points2, 5, '#DD2222');
         }
 
-        function drawDot(radius)
+        function drawDot()
         {
+            var radius = 5;
             context.beginPath();
             context.arc(center.x, center.y, radius, 0, 2 * Math.PI, false);
             context.fillStyle = '#DD2222';
