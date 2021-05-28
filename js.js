@@ -35,15 +35,15 @@ function drawFrame()
         drawLine(pts, width, '#555555');
     }
 }
-function createPoints(angle, center, r1, r2)
+function createPoints(angle, centerPoint, r1, r2)
 {
     var point1 = {
-        x:(center.x+(r1*Math.cos(Math.PI*angle/180))),
-        y:(center.y+(r1*Math.sin(Math.PI*angle/180)))
+        x:(centerPoint.x+(r1*Math.cos(Math.PI*angle/180))),
+        y:(centerPoint.y+(r1*Math.sin(Math.PI*angle/180)))
     }
     var point2 = {
-        x:(center.x+(r2*Math.cos(Math.PI*angle/180))),
-        y:(center.y+(r2*Math.sin(Math.PI*angle/180)))
+        x:(centerPoint.x+(r2*Math.cos(Math.PI*angle/180))),
+        y:(centerPoint.y+(r2*Math.sin(Math.PI*angle/180)))
     }
     return [point1, point2];
 }
